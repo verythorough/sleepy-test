@@ -6,7 +6,7 @@
   <body>
     <p>This is only a test.</p>
     <p><button onclick="deployAll()">Deploy all sleepies</button></p>
-    <p><button onclick="deploy(0)">Deploy sleepy0</button></p>
+    <p><button onclick="deploy(0)">Deploy production</button></p>
     <p><button onclick="deploy(1)">Deploy sleepy1</button></p>
     <p><button onclick="deploy(2)">Deploy sleepy2</button></p>
     <p><button onclick="deploy(3)">Deploy sleepy3</button></p>
@@ -16,6 +16,12 @@
     <p><button onclick="deploy(7)">Deploy sleepy7</button></p>
     <p><button onclick="deploy(8)">Deploy sleepy8</button></p>
     <p><button onclick="deploy(9)">Deploy sleepy9</button></p>
+    <p><button onclick="deploy(10)">Deploy sleepy10</button></p>
+    <p><button onclick="deploy(11)">Deploy sleepy11</button></p>
+    <p><button onclick="deploy(12)">Deploy sleepy12</button></p>
+    <p><button onclick="deploy(13)">Deploy sleepy13</button></p>
+    <p><button onclick="deploy(14)">Deploy sleepy14</button></p>
+    <p><button onclick="deploy(15)">Deploy sleepy15</button></p>
 
     <script>
       function deploy(sleepNumber) {
@@ -27,7 +33,7 @@
       }
 
       function deployAll() {
-        for (i = 0 ; i <= 9 ; i++) {
+        for (i = 0 ; i <= 15 ; i++) {
           deploy(i)
         }
       }
