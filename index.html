@@ -1,1 +1,36 @@
-This is only a test.
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is only a text.</title>
+  </head>
+  <body>
+    <p>This is only a test.</p>
+    <p><button onclick="deployAll()">Deploy all sleepies</button></p>
+    <p><button onclick="deploy(0)">Deploy sleepy0</button></p>
+    <p><button onclick="deploy(1)">Deploy sleepy1</button></p>
+    <p><button onclick="deploy(2)">Deploy sleepy2</button></p>
+    <p><button onclick="deploy(3)">Deploy sleepy3</button></p>
+    <p><button onclick="deploy(4)">Deploy sleepy4</button></p>
+    <p><button onclick="deploy(5)">Deploy sleepy5</button></p>
+    <p><button onclick="deploy(6)">Deploy sleepy6</button></p>
+    <p><button onclick="deploy(7)">Deploy sleepy7</button></p>
+    <p><button onclick="deploy(8)">Deploy sleepy8</button></p>
+    <p><button onclick="deploy(9)">Deploy sleepy9</button></p>
+
+    <script>
+      function deploy(sleepNumber) {
+        let hookUrl = 'https://api.netlify.com/build_hooks/5f0e39f2915a551c4f55d74a?trigger_branch=sleepy' + sleepNumber
+        var xhr = new XMLHttpRequest()
+        xhr.open('POST', hookUrl)
+        xhr.send('{}')
+        console.log(`Triggered for sleepy${sleepNumber}`)
+      }
+
+      function deployAll() {
+        for (i = 0 ; i <= 9 ; i++) {
+          deploy(i)
+        }
+      }
+    </script>
+  </body>
+</html>
